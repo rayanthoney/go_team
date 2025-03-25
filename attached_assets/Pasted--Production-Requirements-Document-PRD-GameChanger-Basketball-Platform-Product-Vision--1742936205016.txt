@@ -1,0 +1,55 @@
+### Production Requirements Document (PRD): GameChanger Basketball Platform
+
+#### **Product Vision**
+To provide a seamless platform for basketball teams, players, coaches, and fans to enhance their game experience through live streaming, analytics, and team management features. The application aims to elevate basketball IQ and improve engagement.
+
+#### **Key Features**
+1. **Live Video Streaming**
+   - Enable completely free game streaming with AutoStream technology that follows the action on iOS devices.
+   - Provide audience control to restrict access to streams.
+   - Allow access to an archive of streamed games for on-demand viewing.
+   - Integrated scoreboard visible during streams.
+
+2. **Film Room (Game Analysis)**
+   - Automatic removal of downtime such as halftime and timeouts.
+   - Features for tagging, commenting, and sharing key moments from game footage.
+   - Integration of automatic highlight clips for scoring plays, assists, blocks, steals, and rebounds.
+
+3. **Scorekeeping & Statistics**
+   - Real-time scorekeeping that includes tracking scoring plays, rebounds, assists, blocks, turnovers, and fouls.
+   - Automatic prompts for assist and rebound options on missed or made shots.
+   - Ability to stream games and score them on the same device.
+   - Post-game recaps available in a newspaper-style format.
+
+4. **Team Management**
+   - Season schedule creation with calendar synchronization.
+   - In-app messaging for team communication.
+   - RSVP feature for tracking player and staff availability for games.
+
+#### **Subscription Tiers**
+1. **Free Plan**:
+   - Includes core features like live streaming, scheduling, and messaging.
+2. **Plus Plan** ($29.99/year):
+   - Adds box scores, live play-by-plays, game recap stories, and live game alerts.
+3. **Premium Plan** ($89.99/year):
+   - Includes all features in Plus, along with full event videos, highlight clipping, season stats, spray charts, and shareable athlete profiles.
+
+#### **User Roles**
+1. **Coaches**: Full access to all features without any subscription fees.
+2. **Fans/Family Members**: Access basic features for free, with the option to subscribe for enhanced content.
+
+#### **Design Requirements**
+1. The platform's design should prioritize intuitive usability for all user types (coaches, players, fans).
+2. User Interface must be responsive across devices.
+3. Leverage **Shadcn** components for UI consistency and enhanced design aesthetics.
+
+#### **Non-Functional Requirements**
+1. Must ensure video streaming reliability and minimal latency.
+2. Design backend systems to support high traffic during games.
+3. Provide options for secure user data management and audience control features.
+4. Ensure integration with calendars and messaging platforms.
+
+#### **Additional Resources**
+1. Tutorials provided via GameChanger University.
+2. Webinars and documentation available for onboarding users.
+3. In-app product updates and tips through content hubs (e.g., The Hoops Digest).
