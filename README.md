@@ -20,7 +20,7 @@
 
 <!-- ABOUT THE PROJECT -->
 # Project Overview
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://github.com/rayanthoney/go_team/blob/main/images/readyroster.png)
 
 This project is a modern web application built with a focus on scalability, performance, and maintainability. Below is an overview of the tech stack and tools used to create it.
 
