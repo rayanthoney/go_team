@@ -1,4 +1,4 @@
-### Production Requirements Document (PRD): GameChanger Basketball Platform
+### Production Requirements Document (PRD): ReadyRoster Basketball Platform
 
 #### **Product Vision**
 To provide a seamless platform for basketball teams, players, coaches, and fans to enhance their game experience through live streaming, analytics, and team management features. The application aims to elevate basketball IQ and improve engagement.
@@ -50,6 +50,6 @@ To provide a seamless platform for basketball teams, players, coaches, and fans 
 4. Ensure integration with calendars and messaging platforms.
 
 #### **Additional Resources**
-1. Tutorials provided via GameChanger University.
+1. Tutorials provided via ReadyRoster University.
 2. Webinars and documentation available for onboarding users.
 3. In-app product updates and tips through content hubs (e.g., The Hoops Digest).

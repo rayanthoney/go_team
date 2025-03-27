@@ -1,17 +1,36 @@
 import { useState } from "react";
-import { 
-  Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter 
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardFooter,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
-import { Check, CreditCard, Package, PlayCircle, BarChart2, Film, Calendar, Users } from "lucide-react";
-import { PlanCard, SubscriptionPlan } from "@/components/subscription/plan-card";
+import {
+  Check,
+  CreditCard,
+  Package,
+  PlayCircle,
+  BarChart2,
+  Film,
+  Calendar,
+  Users,
+} from "lucide-react";
+import {
+  PlanCard,
+  SubscriptionPlan,
+} from "@/components/subscription/plan-card";
 import { useToast } from "@/hooks/use-toast";
 
 export default function Subscription() {
-  const [billingCycle, setBillingCycle] = useState<"yearly" | "monthly">("yearly");
+  const [billingCycle, setBillingCycle] = useState<"yearly" | "monthly">(
+    "yearly"
+  );
   const { toast } = useToast();
-  
+
   const handleSelectPlan = (planId: string) => {
     // In a real implementation, this would open a payment flow
     toast({
@@ -37,9 +56,9 @@ export default function Subscription() {
         { name: "Full event videos", included: false },
         { name: "Highlight clipping", included: false },
         { name: "Season stats", included: false },
-        { name: "Athlete profiles", included: false }
+        { name: "Athlete profiles", included: false },
       ],
-      current: true
+      current: true,
     },
     {
       id: "plus",
@@ -59,9 +78,9 @@ export default function Subscription() {
         { name: "Full event videos", included: false },
         { name: "Highlight clipping", included: false },
         { name: "Season stats", included: false },
-        { name: "Athlete profiles", included: false }
+        { name: "Athlete profiles", included: false },
       ],
-      highlighted: true
+      highlighted: true,
     },
     {
       id: "premium",
@@ -82,9 +101,9 @@ export default function Subscription() {
         { name: "Highlight clipping", included: true },
         { name: "Season stats", included: true },
         { name: "Spray charts", included: true },
-        { name: "Shareable athlete profiles", included: true }
-      ]
-    }
+        { name: "Shareable athlete profiles", included: true },
+      ],
+    },
   ];
 
   return (
@@ -95,13 +114,13 @@ export default function Subscription() {
           <p className="text-xl text-neutral-600 mb-6">
             Choose the plan that fits your team's needs
           </p>
-          
+
           <div className="flex items-center justify-center mb-4">
             <button
               onClick={() => setBillingCycle("monthly")}
               className={`px-4 py-2 rounded-l-lg ${
-                billingCycle === "monthly" 
-                  ? "bg-[#FF6B00] text-white" 
+                billingCycle === "monthly"
+                  ? "bg-[#FF6B00] text-white"
                   : "bg-neutral-100 text-neutral-700"
               }`}
             >
@@ -110,8 +129,8 @@ export default function Subscription() {
             <button
               onClick={() => setBillingCycle("yearly")}
               className={`px-4 py-2 rounded-r-lg ${
-                billingCycle === "yearly" 
-                  ? "bg-[#FF6B00] text-white" 
+                billingCycle === "yearly"
+                  ? "bg-[#FF6B00] text-white"
                   : "bg-neutral-100 text-neutral-700"
               }`}
             >
@@ -122,7 +141,7 @@ export default function Subscription() {
             </button>
           </div>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {plans.map((plan) => (
             <PlanCard
@@ -132,7 +151,7 @@ export default function Subscription() {
             />
           ))}
         </div>
-        
+
         <Card className="mb-12">
           <CardHeader>
             <CardTitle>Compare Plans</CardTitle>
@@ -277,7 +296,7 @@ export default function Subscription() {
             </div>
           </CardContent>
         </Card>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <Card>
             <CardHeader>
@@ -285,32 +304,46 @@ export default function Subscription() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div>
-                <h3 className="font-medium mb-1">Can I cancel my subscription at any time?</h3>
+                <h3 className="font-medium mb-1">
+                  Can I cancel my subscription at any time?
+                </h3>
                 <p className="text-sm text-neutral-600">
-                  Yes, you can cancel your subscription at any time. If you cancel, you'll continue to have access to your plan's features until the end of your billing period.
+                  Yes, you can cancel your subscription at any time. If you
+                  cancel, you'll continue to have access to your plan's features
+                  until the end of your billing period.
                 </p>
               </div>
               <div>
-                <h3 className="font-medium mb-1">How do I change my subscription plan?</h3>
+                <h3 className="font-medium mb-1">
+                  How do I change my subscription plan?
+                </h3>
                 <p className="text-sm text-neutral-600">
-                  You can upgrade or downgrade your plan at any time from your account settings. Changes take effect at the start of your next billing cycle.
+                  You can upgrade or downgrade your plan at any time from your
+                  account settings. Changes take effect at the start of your
+                  next billing cycle.
                 </p>
               </div>
               <div>
-                <h3 className="font-medium mb-1">Is there a limit to how many games I can stream?</h3>
+                <h3 className="font-medium mb-1">
+                  Is there a limit to how many games I can stream?
+                </h3>
                 <p className="text-sm text-neutral-600">
-                  No, there is no limit to the number of games you can stream on any plan. Stream as many games as you'd like!
+                  No, there is no limit to the number of games you can stream on
+                  any plan. Stream as many games as you'd like!
                 </p>
               </div>
               <div>
-                <h3 className="font-medium mb-1">How many team members can I add?</h3>
+                <h3 className="font-medium mb-1">
+                  How many team members can I add?
+                </h3>
                 <p className="text-sm text-neutral-600">
-                  All plans allow you to add unlimited team members, including players, coaches, and staff.
+                  All plans allow you to add unlimited team members, including
+                  players, coaches, and staff.
                 </p>
               </div>
             </CardContent>
           </Card>
-          
+
           <Card>
             <CardHeader>
               <CardTitle>Key Benefits</CardTitle>
@@ -324,13 +357,16 @@ export default function Subscription() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-medium mb-1">Enhanced Live Streaming</h3>
+                    <h3 className="font-medium mb-1">
+                      Enhanced Live Streaming
+                    </h3>
                     <p className="text-sm text-neutral-600">
-                      Broadcast games with AutoStream technology that automatically follows the action on iOS devices.
+                      Broadcast games with AutoStream technology that
+                      automatically follows the action on iOS devices.
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="mr-3 mt-1">
                     <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center">
@@ -340,11 +376,12 @@ export default function Subscription() {
                   <div>
                     <h3 className="font-medium mb-1">Advanced Game Analysis</h3>
                     <p className="text-sm text-neutral-600">
-                      Review game footage with automatic highlight clips for scoring plays, assists, blocks, steals, and rebounds.
+                      Review game footage with automatic highlight clips for
+                      scoring plays, assists, blocks, steals, and rebounds.
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="mr-3 mt-1">
                     <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center">
@@ -352,13 +389,16 @@ export default function Subscription() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-medium mb-1">Comprehensive Statistics</h3>
+                    <h3 className="font-medium mb-1">
+                      Comprehensive Statistics
+                    </h3>
                     <p className="text-sm text-neutral-600">
-                      Track detailed player and team statistics with real-time scoring and automatic statistical compilations.
+                      Track detailed player and team statistics with real-time
+                      scoring and automatic statistical compilations.
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="mr-3 mt-1">
                     <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center">
@@ -368,7 +408,8 @@ export default function Subscription() {
                   <div>
                     <h3 className="font-medium mb-1">Team Management</h3>
                     <p className="text-sm text-neutral-600">
-                      Organize your team with scheduling, messaging, and RSVP features for games and practices.
+                      Organize your team with scheduling, messaging, and RSVP
+                      features for games and practices.
                     </p>
                   </div>
                 </div>
@@ -376,14 +417,17 @@ export default function Subscription() {
             </CardContent>
           </Card>
         </div>
-        
+
         <Card className="border-[#FF6B00] bg-[#FF6B00]/5">
           <CardContent className="p-6">
             <div className="flex flex-col md:flex-row md:items-center justify-between">
               <div className="mb-4 md:mb-0">
-                <h3 className="text-lg font-bold mb-1">Ready to elevate your team's game?</h3>
+                <h3 className="text-lg font-bold mb-1">
+                  Ready to elevate your team's game?
+                </h3>
                 <p className="text-neutral-600">
-                  Get started with GameChanger today and transform how you coach, play, and experience basketball.
+                  Get started with ReadyRoster today and transform how you
+                  coach, play, and experience basketball.
                 </p>
               </div>
               <Button className="bg-[#FF6B00] hover:bg-orange-700">
